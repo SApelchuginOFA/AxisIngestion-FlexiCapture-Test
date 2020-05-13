@@ -1,4 +1,5 @@
--- USE [DB Name]
+USE [Claims_DB]
+GO
 
 --
 -- ERP_Broker : ID, Name
@@ -32,16 +33,16 @@ UNION SELECT 1612,'Alpha Re'
 GO
 
 --
--- ERP_Cedent_SICS : ID, Name
+-- ERP_Cedent : ID, Name
 --
 
-DROP TABLE [dbo].[ERP_Cedent_SICS]
+DROP TABLE [dbo].[ERP_Cedent]
 GO
 
-CREATE TABLE [dbo].[ERP_Cedent_SICS] (ID VARCHAR(20) PRIMARY KEY, Name NVARCHAR(100))
+CREATE TABLE [dbo].[ERP_Cedent] (ID VARCHAR(20) PRIMARY KEY, Name NVARCHAR(100))
 GO
 
-INSERT INTO [dbo].[ERP_Cedent_SICS] (Name, ID)
+INSERT INTO [dbo].[ERP_Cedent] (Name, ID)
       SELECT 'Allianz - Paris', 1336
 UNION SELECT 'Tu Allianz Polska', 3305
 UNION SELECT 'Allianz - Mexico City', 1389
@@ -120,16 +121,16 @@ UNION SELECT 'IC20190161'
 GO
 
 --
--- ERP_SICS_Business_ID : ID
+-- ERP_Business : ID
 --
 
-DROP TABLE [dbo].[ERP_SICS_Business_ID]
+DROP TABLE [dbo].[ERP_Business]
 GO
 
-CREATE TABLE [dbo].[ERP_SICS_Business_ID] (ID VARCHAR(20) PRIMARY KEY)
+CREATE TABLE [dbo].[ERP_Business] (ID VARCHAR(20) PRIMARY KEY)
 GO
 
-INSERT INTO [dbo].[ERP_SICS_Business_ID] (ID)
+INSERT INTO [dbo].[ERP_Business] (ID)
       SELECT '1115458'
 UNION SELECT '1115457'
 UNION SELECT '1115456'
@@ -138,16 +139,16 @@ UNION SELECT '15803'
 GO
 
 --
--- ERP_SICS_Program_ID : ID
+-- ERP_Program : ID
 --
 
-DROP TABLE [dbo].[ERP_SICS_Program_ID]
+DROP TABLE [dbo].[ERP_Program]
 GO
 
-CREATE TABLE [dbo].[ERP_SICS_Program_ID] (ID VARCHAR(20) PRIMARY KEY)
+CREATE TABLE [dbo].[ERP_Program] (ID VARCHAR(20) PRIMARY KEY)
 GO
 
-INSERT INTO [dbo].[ERP_SICS_Program_ID] (ID)
+INSERT INTO [dbo].[ERP_Program] (ID)
       SELECT 'RIP10055'
 UNION SELECT 'RIP10025'
 UNION SELECT 'RIP10001'
